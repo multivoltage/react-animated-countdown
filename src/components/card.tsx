@@ -67,6 +67,7 @@ const Content = styled(animated.div)`
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
+  perspective: 500px;
 `;
 
 const Card = styled.div`
@@ -96,7 +97,10 @@ export const ContentShared = styled.div`
 
   border-radius: 14px;
   background: #9c27b0;
-  border: 6px solid #009688;
+  border: 3px solid #009688;
+  @media (min-width: 768px) {
+    border-width: 6px;
+  }
 `;
 
 const ContentFront = styled(ContentShared)`
